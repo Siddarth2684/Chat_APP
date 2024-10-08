@@ -2,10 +2,10 @@ import { createContext, useEffect, useState, useContext } from "react";
 import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
 
-const SocketContext = createContext();
+const socketContext = createContext();
 
 export const useSocketContext = () => {
-  return useContext(SocketContext);
+  return useContext(socketContext);
 };
 
 export const SocketContextProvider = ({ children }) => {
@@ -37,8 +37,8 @@ export const SocketContextProvider = ({ children }) => {
   }, [authUser]);
 
   return (
-    <SocketContext.Provider value={{ socket, onlineUsers }}>
+    <socketContext.Provider value={{ socket, onlineUsers }}>
       {children}
-    </SocketContext.Provider>
+    </socketContext.Provider>
   );
 };
