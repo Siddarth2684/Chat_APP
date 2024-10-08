@@ -8,9 +8,9 @@ import userRoutes from "./routes/user.routes.js";
 
 
 import connectToMongoDB from "./DB/connectToMongoDB.js";
+import { app, server } from "./socket/socket.js";
 
-//Calling the expressJS
-const app = express();
+
 //instead of creating a hardcoded value for port 5000 we create a varible and either we use 5000 or we get it from env file 
 const PORT = process.env.PORT || 5000;
 
@@ -38,7 +38,7 @@ app.use("/api/users",userRoutes);
 
 
 //To listen on server we used port number 5000
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   connectToMongoDB();
   console.log(`Server Running on Port ${PORT}`);
 });
