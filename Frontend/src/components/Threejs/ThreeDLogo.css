@@ -1,0 +1,15 @@
+.three-d-logo {
+  position: fixed;
+  top: 40px; /* Adjust as necessary */
+  left: 60px; /* Adjust as necessary */
+  width: 160px; /* Increase width */
+  height: auto; /* Maintain aspect ratio */
+  pointer-events: none; /* Prevent mouse events */
+  z-index: 10; /* Ensure it's above other elements */
+  background-color: rgba(255, 255, 255, 0); /* Make sure it’s transparent */
+}
+
+.three_bg {
+  position: fixed;
+  z-index: 1;
+}

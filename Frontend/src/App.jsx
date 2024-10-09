@@ -5,11 +5,15 @@ import Login from "./pages/login/Login";
 import SignUp from "./pages/signup/SignUp";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
+import ThreeDLogo from "./components/Threejs/ThreeDLogo";
+import ThreeDBackground from "./components/Threejs/ThreeDBackground";
 
 function App() {
   const { authUser } = useAuthContext();
   return (
     <div className="p-4 h-screen flex items-center justify-center">
+      <ThreeDBackground />
+      <ThreeDLogo />
       <Routes>
         <Route
           path="/"
